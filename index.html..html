@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#17152e">
+<title>מי מלכת שיעורי הבית? — מהדורת הבוס</title>
+<style>
+:root{--bg:#17152e;--panel:#24213f;--panel2:#302b50;--ink:#fff;--muted:#c8c3e6;--pink:#ff4fa3;--yellow:#ffd166;--cyan:#66e3e0;--green:#70e1a1;--red:#ff7185}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 15% 5%,#51318a 0,transparent 35%),radial-gradient(circle at 90% 90%,#742b68 0,transparent 35%),var(--bg);color:var(--ink);font-family:system-ui,Arial,sans-serif;padding:18px;max-width:760px;margin:auto}
+button,input{font:inherit}button{cursor:pointer}.screen{display:none;animation:enter .28s ease}.screen.on{display:block}@keyframes enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+header{text-align:center;padding:12px 0 18px}.logo{font-size:64px;filter:drop-shadow(0 8px 14px #0005)}h1{font-size:clamp(27px,7vw,42px);margin:4px 0;line-height:1.1}.sub{color:var(--muted);line-height:1.6;margin:8px auto;max-width:550px}
+.panel{background:#24213fee;border:1px solid #ffffff20;border-radius:24px;padding:20px;margin:14px 0;box-shadow:0 14px 35px #0003}.tag{display:inline-flex;gap:6px;align-items:center;border-radius:99px;background:#ffffff14;padding:7px 12px;color:var(--muted);font-size:13px;font-weight:700}
+input{width:100%;padding:15px;border-radius:14px;border:1px solid #ffffff25;background:#17152e;color:white;margin:7px 0 12px;text-align:center;outline:none}
+.btn{border:0;border-radius:16px;padding:14px 18px;font-weight:900;font-size:17px;background:var(--yellow);color:#29213a;box-shadow:0 5px 0 #bb8b32;transition:.12s}.btn:active{transform:translateY(3px);box-shadow:0 2px 0 #bb8b32}.btn.full{width:100%}.btn.secondary{background:#ffffff16;color:white;box-shadow:none;border:1px solid #ffffff25}.btn.pink{background:var(--pink);color:white;box-shadow:0 5px 0 #a42b68}.btn:disabled{opacity:.45;cursor:not-allowed}
+.modes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}.mode{border:1px solid #ffffff25;background:#ffffff0d;color:white;padding:13px;border-radius:16px;text-align:right}.mode b{display:block;font-size:16px}.mode small{color:var(--muted)}.mode.selected{border:2px solid var(--yellow);background:#ffd16618}
+.top{display:flex;justify-content:space-between;gap:7px;flex-wrap:wrap;margin:10px 0}.stat{background:#ffffff15;border-radius:12px;padding:8px 11px;font-size:13px;font-weight:800}
+.progress{height:9px;background:#ffffff20;border-radius:20px;overflow:hidden;margin:12px 0 18px}.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pink),var(--yellow));transition:width .25s}
+.question-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.kind{color:var(--cyan);font-weight:900;font-size:13px}.timer{font-weight:900;color:var(--yellow)}
+.question{font-size:clamp(20px,5vw,27px);font-weight:900;text-align:center;line-height:1.45;padding:25px 12px;min-height:130px;display:grid;place-items:center;background:linear-gradient(135deg,#39335f,#292545);border-radius:20px;border:1px solid #ffffff18}
+.answers{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.answer{min-height:72px;border:1px solid #ffffff25;border-radius:15px;background:#ffffff12;color:white;padding:12px;font-weight:800;font-size:15px}.answer:hover{background:#ffffff22}.answer.correct{background:#176b4a;border-color:var(--green)}.answer.wrong{background:#7b2944;border-color:var(--red)}.answer:disabled{cursor:default}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.tool{flex:1;min-width:110px;border:1px solid #ffffff22;background:#ffffff12;color:white;border-radius:13px;padding:10px;font-size:13px;font-weight:800}.tool:disabled{opacity:.35}
+.feedback{margin-top:14px;padding:14px;border-radius:16px;background:#ffffff12;line-height:1.6;text-align:center}.feedback b{display:block;font-size:19px;margin-bottom:4px}
+.hidden{display:none!important}.center{text-align:center}.big{font-size:58px;font-weight:1000;color:var(--yellow);line-height:1.2}.result-title{font-size:30px;font-weight:1000}.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.result-box{background:#ffffff12;border-radius:16px;padding:14px;text-align:center}.result-box strong{display:block;font-size:25px;color:var(--yellow)}
+.badges{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:14px 0}.badge{background:#ffd16620;border:1px solid #ffd16655;color:var(--yellow);padding:8px 12px;border-radius:99px;font-size:13px;font-weight:900}
+.challenge{border:1px dashed var(--pink);background:#ff4fa315;border-radius:18px;padding:16px;margin-top:14px}.challenge h3{margin:0 0 8px;color:#ff9ac9}.challenge p{line-height:1.6}
+footer{text-align:center;color:#a9a3c9;font-size:12px;padding:18px}
+@media(max-width:430px){body{padding:12px}.panel{padding:15px}.answers{gap:8px}.answer{font-size:14px;padding:10px}.modes{gap:8px}}
+</style>
+</head>
+<body>
+<div id="home" class="screen on">
+<header><div class="logo">👑📚</div><span class="tag">THE HOMEWORK SHOW · מהדורת הבוס</span><h1>מי מלכת שיעורי הבית؟</h1><p class="sub">זה כבר לא חידון רגיל. יש משימות, הפתעות, בונוסים ושאלות שיגרמו לכיתה להתווכח 😈</p></header>
+<section class="panel">
+<label for="player"><b>איך קוראים למתמודדת?</b></label><input id="player" maxlength="18" placeholder="השם שלך / הכינוי שלך">
+<div><b>בחרי מצב משחק:</b></div>
+<div class="modes">
+<button class="mode selected" data-mode="mix"><b>🎲 הכול מהכול</b><small>שאלות מכל הסוגים</small></button>
+<button class="mode" data-mode="speed"><b>⚡ מצב טורבו</b><small>זמן קצר וניקוד כפול</small></button>
+<button class="mode" data-mode="brain"><b>🧠 מצב חשיבה</b><small>תרחישים ודילמות</small></button>
+<button class="mode" data-mode="chill"><b>🌈 בלי לחץ</b><small>יותר זמן, משחק רגוע</small></button>
+</div>
+<button class="btn full" id="start">יאללה, תנו לי את הכתר 👑</button>
+<p class="sub center">10 סיבובים · אפשר להשתמש בوسائل مساعدة · لا توجد خسارة، فقط نقاط ولقب أسطوري</p>
+</section>
+</div>
+
+<div id="game" class="screen">
+<div class="top"><span class="stat" id="round">1 / 10</span><span class="stat" id="score">⭐ 0</span><span class="stat" id="streak">🔥 רצף 0</span></div>
+<div class="progress"><i id="bar"></i></div>
+<div class="question-meta"><span class="kind" id="kind">בחירה מרובה</span><span class="timer" id="clock">⏱ 15</span></div>
+<div class="question" id="question"></div>
+<div class="answers" id="answers"></div>
+<div class="tools">
+<button class="tool" id="fifty">🪄 50:50 <span id="fiftyCount">1</span></button>
+<button class="tool" id="skip">⏭ דילוג <span id="skipCount">1</span></button>
+<button class="tool" id="double">💎 ניקוד כפול <span id="doubleCount">1</span></button>
+</div>
+<div class="feedback hidden" id="feedback"></div>
+<button class="btn full hidden" id="next" style="margin-top:12px">הבא בתור ➜</button>
+</div>
+
+<div id="result" class="screen">
+<header><div class="logo" id="resultEmoji">🏆</div><div class="result-title" id="resultTitle">הכתר שלך!</div><p class="sub" id="resultSub"></p></header>
+<section class="panel">
+<div class="big" id="finalScore">0 ⭐</div>
+<div class="result-grid">
+<div class="result-box">תשובות נכונות<strong id="correctCount">0/10</strong></div>
+<div class="result-box">הרצף הכי ארוך<strong id="bestStreak">0 🔥</strong></div>
+</div>
+<div class="badges" id="badges"></div>
+<div class="challenge"><h3>🎤 שאלת הכיתה — עכשיו תורכן!</h3><p id="classPrompt"></p><button class="btn secondary full" id="newPrompt">תני שאלה אחרת 🔄</button></div>
+<button class="btn full" id="again" style="margin-top:16px">עוד סיבוב! 🔁</button>
+</section>
+</div>
+<footer>👑 מלכת שיעורי הבית — כי גם למוח מגיעה הפסקה</footer>
+<script>
+const bank=[
+{type:'ידע מהיר',kind:'choice',q:'כמה שעות שינה מומלצות בדרך כלל לבני נוער?',a:['5–6 שעות','6–7 שעות','8–10 שעות','11–12 שעות'],c:2,why:'שינה מספקת תומכת בריכוז, בזיכרון ובהרגשה טובה.'},
+{type:'ידע מהיר',kind:'choice',q:'מה עוזר לזכור חומר לאורך זמן?',a:['ללמוד הכול בלילה אחד','לחזור בכמה ימים שונים','לקרוא פעם אחת במהירות','לוותר על הפסקות'],c:1,why:'חזרות במרווחי זמן עוזרות לחזק את הזיכרון.'},
+{type:'נכון או לא?',kind:'tf',q:'הפסקות קצרות בזמן למידה יכולות לעזור לחזור מרוכזים יותר.',a:['נכון ✅','לא נכון ❌'],c:0,why:'הפסקה קצרה, תנועה ושתייה יכולות לרענן את הראש.'},
+{type:'נכון או לא?',kind:'tf',q:'אם מכינים שיעורי בית עד מאוחר מאוד, זה תמיד משפר את ההישגים.',a:['נכון ✅','לא נכון ❌'],c:1,why:'עומס ושינה מועטה עלולים לפגוע בריכוז. איזון חשוב.'},
+{type:'מה היית עושה?',kind:'scenario',q:'מחר מבחן, ויש לך גם שלושה שיעורי בית. מה הצעד החכם ביותר?',a:['להתחיל מהכול ביחד','לתכנן, לבחור מה דחוף ולשמור זמן לשינה','לדחות הכול לרגע האחרון','להעתיק מחברה'],c:1,why:'תכנון וסדר עדיפויות עוזרים להתמודד עם עומס.'},
+{type:'מה היית עושה?',kind:'scenario',q:'חברה אומרת לך שהיא לא מבינה את החומר ומתחילה להילחץ. מה תעשי?',a:['תגידי לה שזה קל','תצחקי עליה','תעזרי לה לפרק את החומר לשלבים','תפתרי במקומה הכול'],c:2,why:'עזרה טובה נותנת כלים ומעודדת עצמאות.'},
+{type:'מי אשמה?',kind:'choice',q:'מה בדרך כלל הופך שיעורי בית לעומס גדול?',a:['עצם הלמידה','כמות גדולה וחלוקה לא מאוזנת','מחברת צבעונית','הפסקה קצרה'],c:1,why:'הבעיה אינה בהכרח שיעורי הבית, אלא הכמות והתזמון שלהם.'},
+{type:'נכון או לא?',kind:'tf',q:'ישיבה ממושכת בלי לקום או לזוז עלולה לגרום לאי־נוחות בגב ובצוואר.',a:['נכון ✅','לא נכון ❌'],c:0,why:'כדאי לשלב שינוי תנוחה ותנועה במהלך יום הלימודים.'},
+{type:'מה היית עושה?',kind:'scenario',q:'קיבלת ארבע משימות ליום אחד ואת מרגישה שהכול מצטבר. מה הכי יעזור?',a:['להילחץ ולנסות הכול בבת אחת','לכתוב רשימה ולחלק את העבודה','לאכול תוך כדי ולא לעצור','לוותר על מנוחה'],c:1,why:'רשימה וחלוקה לחלקים קטנים הופכות משימה גדולה לברורה יותר.'},
+{type:'בוחן פתע',kind:'choice',q:'איזו הפסקה מתאימה במיוחד בין משימות?',a:['עוד שעה מול המסך','קצת מתיחות, מים ואוויר','לדלג על ארוחה','להישאר באותה תנוחה'],c:1,why:'הפסקה עם תנועה קלה ומים יכולה לעזור להתאפס.'},
+{type:'שאלת מיליון',kind:'choice',q:'מה המסר המרכזי של העבודה שלנו?',a:['שיעורי בית הם תמיד רעים','ציונים הם הדבר היחיד שחשוב','למידה חשובה, אבל גם בריאות ומנוחה','צריך לבטל את בית הספר'],c:2,why:'המטרה היא למצוא איזון בין למידה, בריאות ומנוחה.'},
+{type:'דילמה כיתתית',kind:'scenario',q:'המורה נתנה הרבה משימות לאותו יום. איזו הצעה הכי מעשית?',a:['לא לעשות כלום','לתאם חלוקה טובה יותר של המשימות בין הימים','להאשים תלמידים אחרים','להישאר ערים כל הלילה'],c:1,why:'תיאום בין מורים וחלוקת עומס יכולים להפוך את הלמידה לבריאה יותר.'},
+{type:'נכון או לא?',kind:'tf',q:'תכנון זמן יכול להפחית לחץ גם כשיש הרבה משימות.',a:['נכון ✅','לא נכון ❌'],c:0,why:'תכנון לא מעלים את המשימות, אבל עוזר לדעת מאיפה להתחיל.'},
+{type:'מי את בלמידה?',kind:'choice',q:'מה עדיף כשיש נושא גדול ללמוד?',a:['לחלק אותו לנושאים קטנים','לקרוא הכול ברצף בלי לעצור','להתחיל מהעמוד האחרון בלי סיבה','ללמוד רק את הכותרות'],c:0,why:'חלוקה לחלקים קטנים מקלה על ההבנה והמעקב.'},
+{type:'בוחן פתע',kind:'choice',q:'מה כדאי לעשות כשלא מבינים שאלה?',a:['לנחש מיד','לקרוא שוב, לסמן מה מבקשים ולבקש עזרה אם צריך','לסגור את המחברת','להעתיק תשובה בלי להבין'],c:1,why:'קודם מזהים מה השאלה מבקשת, ואז מתקדמים שלב-שלב.'}
+];
+const prompts=[
+'מה הדבר הכי מצחיק שקרה לכן בזמן הכנת שיעורי בית?',
+'איזה מקצוע היה צריך לקבל כפתור “השהה את הזמן” ולמה?',
+'אם שיעורי הבית היו בן אדם — איזה אופי היה לו?',
+'מה החוק האחד שהייתן משנות כדי להפוך את יום הלימודים לטוב יותר?',
+'מי בכיתה תמיד אומרת “אני מתחילה עוד חמש דקות” ואז נעלמת?',
+'איזו מוזיקה או אווירה הכי מתאימה לזמן הכנת שיעורים?',
+'אם היה לכן יום בלי שיעורי בית בכלל, מה הדבר הראשון שהייתן עושות?'
+];
+const $=id=>document.getElementById(id);
+let mode='mix',questions=[],idx=0,score=0,correct=0,streak=0,best=0,time=15,timer=null,locked=false,used={fifty:1,skip:1,double:1},doubleOn=false,player='';
+document.querySelectorAll('.mode').forEach(b=>b.onclick=()=>{document.querySelectorAll('.mode').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');mode=b.dataset.mode});
+function shuffle(a){return [...a].sort(()=>Math.random()-.5)}
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));$(id).classList.add('on');window.scrollTo(0,0)}
+function start(){player=$('player').value.trim();let pool=shuffle(bank);if(mode==='brain')pool=pool.filter(q=>q.kind==='scenario'||q.kind==='tf');if(mode==='speed')pool=shuffle(pool);questions=pool.slice(0,10);idx=score=correct=streak=best=0;used={fifty:1,skip:1,double:1};doubleOn=false;show('game');ask()}
+$('start').onclick=start;
+function ask(){locked=false;clearInterval(timer);let q=questions[idx];$('round').textContent=`סיבוב ${idx+1} / 10`;$('score').textContent=`⭐ ${score}`;$('streak').textContent=`🔥 רצף ${streak}`;$('bar').style.width=(idx/10*100)+'%';$('kind').textContent=q.type;$('question').textContent=q.q;$('feedback').classList.add('hidden');$('next').classList.add('hidden');
+$('answers').innerHTML=q.a.map((a,i)=>`<button class="answer" data-i="${i}">${a}</button>`).join('');$('fiftyCount').textContent=used.fifty;$('skipCount').textContent=used.skip;$('doubleCount').textContent=used.double;
+['fifty','skip','double'].forEach(id=>$(id).disabled=used[id]===0);
+time=mode==='chill'?25:mode==='speed'?10:15;$('clock').textContent=`⏱ ${time}`;timer=setInterval(()=>{time--;$('clock').textContent=`⏱ ${time}`;if(time<=0)finish(-1)},1000);
+}
+$('answers').onclick=e=>{let b=e.target.closest('.answer');if(b&&!locked)finish(+b.dataset.i)};
+function finish(choice){if(locked)return;locked=true;clearInterval(timer);let q=questions[idx],ok=choice===q.c,base=ok?100:0;let bonus=ok?Math.max(0,time)*10:0;if(mode==='speed')base*=2;if(doubleOn&&ok)base*=2;doubleOn=false;score+=base+bonus;if(ok){correct++;streak++;best=Math.max(best,streak)}else streak=0;
+document.querySelectorAll('.answer').forEach((b,i)=>{b.disabled=true;if(i===q.c)b.classList.add('correct');else if(i===choice)b.classList.add('wrong')});
+$('score').textContent=`⭐ ${score}`;$('streak').textContent=`🔥 רצף ${streak}`;$('feedback').innerHTML=`<b>${ok?'🔥 בול!':'🙈 כמעט!' } ${ok?'+'+(base+bonus)+' נקודות':''}</b>${q.why}`;$('feedback').classList.remove('hidden');$('next').textContent=idx===9?'לחשיפת התוצאה 🏆':'המשיכי ➜';$('next').classList.remove('hidden')}
+$('next').onclick=()=>{idx++;if(idx<10)ask();else result()};
+$('fifty').onclick=()=>{if(used.fifty<1||locked)return;used.fifty=0;let q=questions[idx],wrong=[...document.querySelectorAll('.answer')].filter((b,i)=>i!==q.c);shuffle(wrong).slice(0,2).forEach(b=>{b.disabled=true;b.style.opacity='.2'});$('fiftyCount').textContent='0';$('fifty').disabled=true};
+$('skip').onclick=()=>{if(!used.skip||locked)return;used.skip=0;clearInterval(timer);locked=true;streak=0;$('feedback').innerHTML='<b>⏭ דילגת על השאלה!</b>אין נקודות, ממשיכות הלאה.';$('feedback').classList.remove('hidden');$('answers').querySelectorAll('button').forEach(b=>b.disabled=true);$('next').classList.remove('hidden');$('next').textContent=idx===9?'לתוצאה 🏆':'המשיכי ➜';$('skipCount').textContent='0';$('skip').disabled=true};
+$('double').onclick=()=>{if(!used.double||locked)return;used.double=0;doubleOn=true;$('doubleCount').textContent='0';$('double').disabled=true;$('feedback').innerHTML='<b>💎 ניקוד כפול הופעל!</b>אם תעני נכון, הנקודות על השאלה יוכפלו.';$('feedback').classList.remove('hidden')};
+function result(){clearInterval(timer);$('bar').style.width='100%';let title,emoji,sub;if(correct>=9){title='אגדת שיעורי הבית';emoji='👑';sub='המוח שלך במצב טורבו. הכתר לגמרי שלך.'}else if(correct>=7){title='מלכת האיזון';emoji='🏆';sub='את יודעת שלמידה טובה צריכה גם מנוחה.'}else if(correct>=4){title='כוכבת בדרך';emoji='✨';sub='יש לך בסיס טוב — עוד סיבוב ואת משתלטת.'}else{title='המתחילה האמיצה';emoji='💪';sub='לא באנו רק לנצח, באנו ללמוד וליהנות.'}
+$('resultEmoji').textContent=emoji;$('resultTitle').textContent=(player?player+' — ':'')+title;$('resultSub').textContent=sub;$('finalScore').textContent=score+' ⭐';$('correctCount').textContent=correct+'/10';$('bestStreak').textContent=best+' 🔥';let badges=[];if(correct>=9)badges.push('👑 כמעט מושלמת');if(best>=4)badges.push('🔥 רצף אש');if(score>=1500)badges.push('💎 ציידת נקודות');if(used.fifty===0)badges.push('🪄 השתמשת בקסם');if(!badges.length)badges.push('🌱 כל משחק הוא התקדמות');$('badges').innerHTML=badges.map(x=>`<span class="badge">${x}</span>`).join('');newPrompt();show('result')}
+function newPrompt(){$('classPrompt').textContent=prompts[Math.floor(Math.random()*prompts.length)]}
+$('newPrompt').onclick=newPrompt;$('again').onclick=()=>show('home');
+</script>
+</body></html>
